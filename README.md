@@ -1,6 +1,12 @@
 # Directory Tree Generator
 Simple program to generate tree of a given directory.
 
+## Screenshots
+![](https://github.com/4um3n/Directory-Tree-Generator/blob/main/Screenshots/DTG1.png)
+![](https://github.com/4um3n/Directory-Tree-Generator/blob/main/Screenshots/DGT2.png)
+![](https://github.com/4um3n/Directory-Tree-Generator/blob/main/Screenshots/DGT3.png)
+
+
 ## Installation
 1. Clone the repo: `git clone https://github.com/4um3n/Directory-Tree-Generator.git`
 
