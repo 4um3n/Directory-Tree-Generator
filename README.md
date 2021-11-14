@@ -30,15 +30,15 @@ optional arguments:
 1. Open cloned repository and execute `python3 tree_gui.py` 
 
 ## Dependencies
-> ### tkinter
->> Install on Debian and Debian like GNU/Linux distros: `apt-get install python3-tk`
->>
->> Install on Arch and Arch like GNU/Linux distros: `pacman -S tk`
->>
->> Install on Fedora `dnf install python3-tkinter`
+### tkinter
+Install on Debian and Debian like GNU/Linux distros: `apt-get install python3-tk`
 
-> ### easygui
->> Installation: `pip3 install easygui`
+Install on Arch and Arch like GNU/Linux distros: `pacman -S tk`
+
+Install on Fedora `dnf install python3-tkinter`
+
+### easygui
+Installation: `pip3 install easygui`
 
 
 ## Contributing
