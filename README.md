@@ -37,9 +37,6 @@ Install on Arch and Arch like GNU/Linux distros: `pacman -S tk`
 
 Install on Fedora `dnf install python3-tkinter`
 
-### easygui
-Installation: `pip3 install easygui`
-
 
 ## Contributing
 1. Fork it!

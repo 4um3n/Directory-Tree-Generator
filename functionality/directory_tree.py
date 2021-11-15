@@ -27,7 +27,6 @@ class _TreeGenerator:
     def _build_tree_body(self, directory, prefix="") -> None:
         entries = self._get_entries(directory)
         entries_count = len(entries)
-
         for index, entry in enumerate(entries):
             connector = ELBOW if index == entries_count - 1 else TEE
             if entry.is_dir():
@@ -46,7 +45,6 @@ class _TreeGenerator:
             prefix += PIPE_PREFIX
         else:
             prefix += SPACE_PREFIX
-
         self._build_tree_body(directory, prefix=prefix, )
         self._tree.append(prefix.rstrip())
 
@@ -64,22 +62,13 @@ class DirectoryTree:
 
 
 class TreeController:
-    def __init__(self, tree: DirectoryTree):
+    def __init__(self, tree: str):
         self.tree = tree
 
-    def export_tree_to_markdown_file(self, directory_path, file_name):
-        if not directory_path:
-            directory_path = "."
-
-        if file_name.split(".")[-1] != "md":
-            file_name += ".md"
-
-        if file_name in os.listdir(directory_path):
-            raise FileExistsError(f"File with that name already exists in that directory!")
-
-        with open(os.path.join(directory_path, f"{file_name}"), "a") as file:
-            tree_data = '\n'.join(["```", self.tree.generate(), "```"])
-            file.write(tree_data + '\n')
+    def export_tree_to_markdown_file(self, file):
+        tree_data = '\n'.join(["```", self.tree, "```"])
+        file.write(tree_data + '\n')
+        file.close()
 
     def __str__(self):
-        return self.tree.generate()
+        return self.tree
